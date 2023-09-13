@@ -30,4 +30,8 @@ public class Ticket {
         return new Ticket(name, owner, TicketType.TASK, priority, Optional.empty());
     };
 
+    public Developer getOwner() {
+        return this.owner;
+    }
+
 }
