@@ -10,6 +10,8 @@ public class Ticket {
     private Priority priority;
     private Optional<LocalDateTime> deadline;
 
+    private Optional<Integer> points;
+
     private Ticket(String name, Developer owner, TicketType ticketType, Priority priority, Optional<LocalDateTime> deadline) {
         this.name = name;
         this.owner = owner;
@@ -34,4 +36,11 @@ public class Ticket {
         return this.owner;
     }
 
+    public void setPoints(Integer points) {
+        this.points = Optional.of(points);
+    }
+
+    public Integer getPoints() {
+        return points.get();
+    }
 }
