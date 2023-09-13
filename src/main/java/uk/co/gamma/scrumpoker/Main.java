@@ -37,7 +37,7 @@ public class Main {
 
 		PokerDeck deck = new PokerDeck(cards);
 
-		Poker poker = null; // TODO
+		Poker poker = new Poker(developers, deck);
 
 		poker.setVoteGenerator(new RandomVoteGenerator());
 
