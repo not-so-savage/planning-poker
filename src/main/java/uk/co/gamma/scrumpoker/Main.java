@@ -10,6 +10,8 @@ import uk.co.gamma.scrumpoker.domain.Ticket;
 import uk.co.gamma.scrumpoker.domain.Developer;
 import uk.co.gamma.scrumpoker.domain.PokerDeck;
 import uk.co.gamma.scrumpoker.domain.PokerDeckCard;
+import uk.co.gamma.scrumpoker.generator.CardValuesGenerator;
+import uk.co.gamma.scrumpoker.generator.FibonacciCardValuesGenerator;
 import uk.co.gamma.scrumpoker.generator.RandomVoteGenerator;
 import uk.co.gamma.scrumpoker.simulator.Poker;
 
@@ -30,7 +32,9 @@ public class Main {
 
 	private static Poker initPoker(int numberOfCards, List<Developer> developers) {
 
-		List<Integer> values = null; // TODO
+		CardValuesGenerator valuesGenerator = new FibonacciCardValuesGenerator(numberOfCards);
+
+		List<Integer> values = valuesGenerator.generateValues();
 
 		List<PokerDeckCard> cards = null; // TODO
 
