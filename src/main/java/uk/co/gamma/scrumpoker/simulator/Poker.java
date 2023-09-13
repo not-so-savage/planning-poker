@@ -2,6 +2,7 @@ package uk.co.gamma.scrumpoker.simulator;
 
 import java.util.List;
 import uk.co.gamma.scrumpoker.domain.Ticket;
+import uk.co.gamma.scrumpoker.generator.VoteGenerator;
 
 public class Poker {
 

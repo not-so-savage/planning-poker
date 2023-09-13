@@ -3,14 +3,15 @@ package uk.co.gamma.scrumpoker;
 import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 import uk.co.gamma.scrumpoker.domain.Ticket;
 import uk.co.gamma.scrumpoker.domain.Developer;
 import uk.co.gamma.scrumpoker.domain.PokerDeck;
 import uk.co.gamma.scrumpoker.domain.PokerDeckCard;
-import uk.co.gamma.scrumpoker.domain.generator.RandomVoteGenerator;
-import uk.co.gamma.scrumpoker.domain.simulator.Poker;
+import uk.co.gamma.scrumpoker.generator.RandomVoteGenerator;
+import uk.co.gamma.scrumpoker.simulator.Poker;
 
 public class Main {
 
@@ -29,13 +30,13 @@ public class Main {
 
 	private static Poker initPoker(int numberOfCards, List<Developer> developers) {
 
-		List<Integer> values = ...
+		List<Integer> values = null; // TODO
 
-		List<PokerDeckCard> cards = ...
+		List<PokerDeckCard> cards = null; // TODO
 
-		PokerDeck deck = ...
+		PokerDeck deck = null; // TODO
 
-		Poker poker = ...
+		Poker poker = null; // TODO
 
 		poker.setVoteGenerator(new RandomVoteGenerator());
 
@@ -43,15 +44,15 @@ public class Main {
 	}
 
 	private static List<Developer> initDevelopers() {
-
+		return null; // TODO
 	}
 
 	private static List<Ticket> initTickets() {
-
+		return null; // TODO
 	}
 
 	private static void generateJson(List<Ticket> tickets) {
 
-		String report = ...
+		String report = null; // TODO
 	}
 }
