@@ -2,12 +2,11 @@ package uk.co.gamma.scrumpoker;
 
 import static java.util.stream.Collectors.toList;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
-import uk.co.gamma.scrumpoker.domain.Ticket;
-import uk.co.gamma.scrumpoker.domain.Developer;
-import uk.co.gamma.scrumpoker.domain.PokerDeck;
-import uk.co.gamma.scrumpoker.domain.PokerDeckCard;
+
+import uk.co.gamma.scrumpoker.domain.*;
 import uk.co.gamma.scrumpoker.generator.CardValuesGenerator;
 import uk.co.gamma.scrumpoker.generator.FibonacciCardValuesGenerator;
 import uk.co.gamma.scrumpoker.generator.RandomVoteGenerator;
@@ -21,7 +20,7 @@ public class Main {
 
 		Poker poker = initPoker(7, developers);
 
-		List<Ticket> tickets = initTickets();
+		List<Ticket> tickets = initTickets(developers);
 
 		poker.play(tickets);
 
@@ -59,8 +58,19 @@ public class Main {
 		);
 	}
 
-	private static List<Ticket> initTickets() {
-		return null; // TODO
+	private static List<Ticket> initTickets(List<Developer> developers) {
+		return Arrays.asList(
+				Ticket.createBug("gamma-1", developers.get(0), Priority.MAJOR, LocalDateTime.of(2023, 10, 1, 13, 0)),
+				Ticket.createBug("gamma-2", developers.get(1), Priority.MAJOR, LocalDateTime.of(2023, 10, 2, 13, 0)),
+				Ticket.createBug("gamma-3", developers.get(2), Priority.MAJOR, LocalDateTime.of(2023, 10, 3, 13, 0)),
+				Ticket.createFeature("gamma-4", developers.get(3), Priority.MINOR, LocalDateTime.of(2023, 10, 4, 13, 0)),
+				Ticket.createFeature("gamma-5", developers.get(0), Priority.MINOR, LocalDateTime.of(2023, 10, 5, 13, 0)),
+				Ticket.createFeature("gamma-6", developers.get(1), Priority.MINOR, LocalDateTime.of(2023, 10, 6, 13, 0)),
+				Ticket.createTask("gamma-7", developers.get(2), Priority.CRITICAL),
+				Ticket.createTask("gamma-8", developers.get(3), Priority.CRITICAL),
+				Ticket.createTask("gamma-9", developers.get(0), Priority.CRITICAL),
+				Ticket.createTask("gamma-10", developers.get(1), Priority.CRITICAL)
+		);
 	}
 
 	private static void generateJson(List<Ticket> tickets) {

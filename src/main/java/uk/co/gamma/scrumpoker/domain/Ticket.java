@@ -26,7 +26,7 @@ public class Ticket {
         return new Ticket(name, owner, TicketType.FEATURE, priority, Optional.ofNullable(deadline));
     };
 
-    public static Ticket createTask(String name, Developer owner, Priority priority, LocalDateTime deadline) {
+    public static Ticket createTask(String name, Developer owner, Priority priority) {
         return new Ticket(name, owner, TicketType.TASK, priority, Optional.empty());
     };
 
