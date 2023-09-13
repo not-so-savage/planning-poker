@@ -2,10 +2,8 @@ package uk.co.gamma.scrumpoker;
 
 import static java.util.stream.Collectors.toList;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 import uk.co.gamma.scrumpoker.domain.Ticket;
 import uk.co.gamma.scrumpoker.domain.Developer;
 import uk.co.gamma.scrumpoker.domain.PokerDeck;
@@ -32,19 +30,24 @@ public class Main {
 
 	private static Poker initPoker(int numberOfCards, List<Developer> developers) {
 
-		CardValuesGenerator valuesGenerator = new FibonacciCardValuesGenerator(numberOfCards);
+		CardValuesGenerator cardValuesGenerator = new FibonacciCardValuesGenerator(numberOfCards);
+		List<Integer> cardValues = cardValuesGenerator.generateValues();
 
-		List<Integer> values = valuesGenerator.generateValues();
+		List<PokerDeckCard> cards = initCards(cardValues);
 
-		List<PokerDeckCard> cards = null; // TODO
-
-		PokerDeck deck = null; // TODO
+		PokerDeck deck = new PokerDeck(cards);
 
 		Poker poker = null; // TODO
 
 		poker.setVoteGenerator(new RandomVoteGenerator());
 
 		return poker;
+	}
+
+	private static List<PokerDeckCard> initCards(List<Integer> values) {
+		return values.stream()
+				.map(PokerDeckCard::new)
+				.collect(toList());
 	}
 
 	private static List<Developer> initDevelopers() {
