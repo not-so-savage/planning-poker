@@ -44,7 +44,12 @@ public class Main {
 	}
 
 	private static List<Developer> initDevelopers() {
-		return null; // TODO
+        return Arrays.asList(
+				new Developer("Alice"),
+				new Developer("John"),
+				new Developer("Steph"),
+				new Developer("Henry")
+		);
 	}
 
 	private static List<Ticket> initTickets() {
