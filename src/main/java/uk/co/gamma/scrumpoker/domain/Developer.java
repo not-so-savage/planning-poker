@@ -6,4 +6,8 @@ public class Developer {
     public Developer(String name) {
         this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
 }

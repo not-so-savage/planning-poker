@@ -1,0 +1,121 @@
+[ {
+  "name" : "gamma-1",
+  "owner" : {
+    "name" : "Alice"
+  },
+  "ticketType" : "BUG",
+  "priority" : "MAJOR",
+  "deadline" : {
+    "empty" : false,
+    "present" : true
+  },
+  "points" : 5
+}, {
+  "name" : "gamma-2",
+  "owner" : {
+    "name" : "John"
+  },
+  "ticketType" : "BUG",
+  "priority" : "MAJOR",
+  "deadline" : {
+    "empty" : false,
+    "present" : true
+  },
+  "points" : 13
+}, {
+  "name" : "gamma-3",
+  "owner" : {
+    "name" : "Steph"
+  },
+  "ticketType" : "BUG",
+  "priority" : "MAJOR",
+  "deadline" : {
+    "empty" : false,
+    "present" : true
+  },
+  "points" : 8
+}, {
+  "name" : "gamma-4",
+  "owner" : {
+    "name" : "Henry"
+  },
+  "ticketType" : "FEATURE",
+  "priority" : "MINOR",
+  "deadline" : {
+    "empty" : false,
+    "present" : true
+  },
+  "points" : 8
+}, {
+  "name" : "gamma-5",
+  "owner" : {
+    "name" : "Alice"
+  },
+  "ticketType" : "FEATURE",
+  "priority" : "MINOR",
+  "deadline" : {
+    "empty" : false,
+    "present" : true
+  },
+  "points" : 8
+}, {
+  "name" : "gamma-6",
+  "owner" : {
+    "name" : "John"
+  },
+  "ticketType" : "FEATURE",
+  "priority" : "MINOR",
+  "deadline" : {
+    "empty" : false,
+    "present" : true
+  },
+  "points" : 5
+}, {
+  "name" : "gamma-7",
+  "owner" : {
+    "name" : "Steph"
+  },
+  "ticketType" : "TASK",
+  "priority" : "CRITICAL",
+  "deadline" : {
+    "empty" : true,
+    "present" : false
+  },
+  "points" : 8
+}, {
+  "name" : "gamma-8",
+  "owner" : {
+    "name" : "Henry"
+  },
+  "ticketType" : "TASK",
+  "priority" : "CRITICAL",
+  "deadline" : {
+    "empty" : true,
+    "present" : false
+  },
+  "points" : 8
+}, {
+  "name" : "gamma-9",
+  "owner" : {
+    "name" : "Alice"
+  },
+  "ticketType" : "TASK",
+  "priority" : "CRITICAL",
+  "deadline" : {
+    "empty" : true,
+    "present" : false
+  },
+  "points" : 5
+}, {
+  "name" : "gamma-10",
+  "owner" : {
+    "name" : "John"
+  },
+  "ticketType" : "TASK",
+  "priority" : "CRITICAL",
+  "deadline" : {
+    "empty" : true,
+    "present" : false
+  },
+  "points" : 8
+} ]

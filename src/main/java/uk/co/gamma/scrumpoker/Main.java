@@ -2,11 +2,12 @@ package uk.co.gamma.scrumpoker;
 
 import static java.util.stream.Collectors.toList;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import uk.co.gamma.scrumpoker.domain.*;
@@ -78,6 +79,14 @@ public class Main {
 
 	private static void generateJson(List<Ticket> tickets) {
 
-		String report = null; // TODO
-	}
+		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+		try {
+			String reportJson = ow.writeValueAsString(tickets);
+			FileWriter file = new FileWriter("./poker-report.json");
+			file.write(reportJson);
+			file.close();
+		} catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

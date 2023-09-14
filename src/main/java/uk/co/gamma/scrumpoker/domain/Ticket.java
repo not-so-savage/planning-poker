@@ -43,4 +43,20 @@ public class Ticket {
     public Integer getPoints() {
         return points.get();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public TicketType getTicketType() {
+        return ticketType;
+    }
+
+    public Priority getPriority() {
+        return priority;
+    }
+
+    public Optional<LocalDateTime> getDeadline() {
+        return deadline;
+    }
 }
